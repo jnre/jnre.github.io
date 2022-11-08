@@ -6,7 +6,7 @@ categories: [Thoughts]
 tags: [Random]
 ---
 
-I guess this would be the start of my blog. items here would mainly include coding, some random thoughts and devotional. would probably start with some old stuff 
+I guess this would be the start of my blog. items here would mainly include coding, some random thoughts and devotional. would probably start with some old stuff.
 
 why humble beginnings you might ask. I believe partially it is where i am now. being 29 years of age, the challengers that i face just keep getting increasingly harder. So i think its a good time to take a step back to reflect on where i am now, and where i get called to. (If i ever update this reguarly and look back on this)
 

@@ -2,7 +2,7 @@
 layout: post
 title: Visual SLAM
 date: 2022-11-11 11:01 +0800
-catergories: [slam, computer vision]
+catergories: [SLAM, Computer Vision]
 tags: [c++, algo]
 ---
 

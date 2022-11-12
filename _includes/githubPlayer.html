@@ -1,8 +1,16 @@
-<iframe src="https://user-images.githubusercontent.com/{{ include.id }}" 
-    width="804" 
-    height="450"
+<div class="embeded-github"
+  style="
+    position: fixed;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+  "
+>
+  <iframe class="embeded-github-iframe"
+    src="https://user-images.githubusercontent.com/{{ include.id }}"
     frameborder="0"
-    allowfullscreen 
-    >
-
-</iframe>
+    allowfullscreen
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
+  >
+  </iframe>
+</div>

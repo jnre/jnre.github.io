@@ -26,23 +26,25 @@ listed as a [guide](https://auth0.com/docs/get-started/authentication-and-author
 
 ```mermaid
 sequenceDiagram
+  autonumber
   participant User
   participant App
   participant Authorization Tenant/Server
   participant Your Api
-  User ->> App: 1. Click login link
-  App -->> App: 2. Generate Code verifier and Code challenge
-  App ->> Authorization Tenant/Server: 3. Authorization Code Request + Code Challenge to /authorize
-  Authorization Tenant/Server ->> User: 4. Redirect to login/authorization prompt
-  User ->> Authorization Tenant/Server: 5. Authenticate and Consent
-  Authorization Tenant/Server ->> App: 6. Authorization Code
-  App ->> Authorization Tenant/Server: 7. Authorization Code + Code Verifier to /oauth/token
-  Authorization Tenant/Server -->> Authorization Tenant/Server: 8. Validate Code verifier and challenge
-  Authorization Tenant/Server --> App: 9. Id Token and access token
-  App ->> Your Api: 10. Request user data with access token
-  Your Api ->> App: 11. Response
+  User ->> App: Click login link
+  App -->> App: Generate Code verifier and Code challenge
+  App ->> Authorization Tenant/Server: Authorization Code Request + Code Challenge to /authorize
+  Authorization Tenant/Server ->> User: Redirect to login/authorization prompt
+  User ->> Authorization Tenant/Server: Authenticate and Consent
+  Authorization Tenant/Server ->> App: Authorization Code
+  App ->> Authorization Tenant/Server: Authorization Code + Code Verifier to /oauth/token
+  Authorization Tenant/Server -->> Authorization Tenant/Server: Validate Code verifier and challenge
+  Authorization Tenant/Server --> App: Id Token and access token
+  App ->> Your Api: Request user data with access token
+  Your Api ->> App: Response
 
 ```
+
 
 in addition, auth0 actually provides the option of implementing refresh token rotation so that if the refresh token is compromised, it can only be used once.
 

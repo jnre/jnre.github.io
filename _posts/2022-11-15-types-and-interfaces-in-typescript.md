@@ -16,19 +16,41 @@ both types and interfaces can almost do the same thing, but there are some minut
 
 const colors = ["black","brown"] as const
 
-type TColor = typeof colors[number]
+type Color = typeof colors[number]
 
-let color : TColor = "black"
+let color : Color = "black"
 
-interface TColor {
+interface ColorInterface {
     color: typeof colors[number]
 }
 
-let color2: TColor = {
+let color2: ColorInterface = {
     color:"black"
 }
 ```
 in this case when we specify types of IColor, the values we can accept is only of the array const. this is helpful beause we can also use the array colors. Interfaces also cant be implemented on a value itself.
+
+for object
+```typescript
+export const programModeEnumMap = {
+  GROUP: "group",
+  ANNOUNCEMENT: "announcement",
+  ONE_ON_ONE: "1on1",
+  SELF_DIRECTED: "selfDirected",
+  PLANNED_ONE_ON_ONE: "planned1on1",
+  PLANNED_SELF_DIRECTED: "plannedSelfDirected",
+} as const
+
+export type ProgramMap = typeof programModeEnumMap;
+
+export type ProgramKeys = keyof ProgramMap; 
+export type SubSetProgram = Exclude<ProgramKeys,"ANNOUNCEMENT">
+//"GROUP" | "ONE_ON_ONE" | "SELF_DIRECTED" | "PLANNED_ONE_ON_ONE" | "PLANNED_SELF_DIRECTED"
+
+export type Program = ProgramMap[keyof ProgramMap];
+export type IndividualProgram = ProgramMap[keyof Omit<ProgramMap,"GROUP">];
+//"announcement" | "1on1" | "selfDirected" | "planned1on1" | "plannedSelfDirected"
+```
 
 ## extending
 
@@ -75,6 +97,7 @@ type LazyPerson = Getters<Person>;
 ```
 
 it extracts the types of Person and does a templating on it, type casting it with `as` 
+
 
 
 

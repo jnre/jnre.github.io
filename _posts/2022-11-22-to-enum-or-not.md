@@ -60,7 +60,7 @@ type cardSuits = "diamond" | "club" | "hearts" | "spades"
 let suits: cardSuits = "diamond" //OK
 ```
 
-but can we do better? what if they are point system involve for the suits?
+but can we do better? what if there are point system involve for the suits?
 (e.g us wanting to rank them in bridge order - clubs diamond hearts spade)
 
 ```typescript

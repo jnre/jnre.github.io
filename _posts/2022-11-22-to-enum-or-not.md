@@ -60,6 +60,14 @@ type cardSuits = "diamond" | "club" | "hearts" | "spades"
 let suits: cardSuits = "diamond" //OK
 ```
 
+but this doest allow us to iterate through the suits
+
+```typescript
+const suits = ["diamond", "club", "hearts", "spades"] as const
+type cardSuits = typeof suits[number]
+const suit4 = suits.map((v)=>"4"+v) //["4diamond", "4club", "4hearts", "4spades"]
+```
+
 but can we do better? what if there are point system involve for the suits?
 (e.g us wanting to rank them in bridge order - clubs diamond hearts spade)
 
@@ -85,4 +93,7 @@ function compareSuits(suit1: possibleSuits, suit2:possibleSuits){
 
 compareSuits("club","hearts")
 
+//convert to array to use iteration
+const cardSuitsArray = Object.keys(cardSuits)
+const suit3 = cardSuitsArray.map((v)=> "3"+v) //["3club", "3diamond", "3hearts", "3spade"]
 ```

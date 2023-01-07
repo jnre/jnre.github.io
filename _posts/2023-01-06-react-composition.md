@@ -27,7 +27,7 @@ const App = () => {
   )
 }
 
-type pageProps = {
+type PageProps = {
   title: string;
   children?: React.ReactNode;
 };
@@ -39,7 +39,7 @@ const Page = ({ title, children }: pageProps) => (
   </div>
 );
 
-type dashBoardProps = {
+type DashBoardProps = {
   user: string;
   children?: React.ReactNode;
 }

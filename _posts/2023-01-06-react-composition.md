@@ -32,7 +32,7 @@ type PageProps = {
   children?: React.ReactNode;
 };
 
-const Page = ({ title, children }: pageProps) => (
+const Page = ({ title, children }: PageProps) => (
   <div>
     <h1>{title}</h1>
     {children}
@@ -44,7 +44,7 @@ type DashBoardProps = {
   children?: React.ReactNode;
 }
 
-const Dashboard = ({ user,children }: dashBoardProps)=> { //making it optional children
+const Dashboard = ({ user,children }: DashBoardProps)=> { //making it optional children
   return (
     <div>
       <h2>{user}</h2>

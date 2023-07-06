@@ -19,7 +19,7 @@ timezone: "Asia/Singapore"
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Joseph Ng                          # the main title
+title: Joseph Ng Rong En                     # the main title
 
 tagline: looking to build new things everyday   # it will display as the sub-title
 
@@ -38,7 +38,7 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Joseph Ng
+  name: Joseph Ng Rong En
   email: josephng1993@gmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
